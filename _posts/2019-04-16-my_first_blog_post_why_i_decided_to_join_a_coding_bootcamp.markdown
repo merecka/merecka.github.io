@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "My First Blog Post:  Why I decided to join a Coding Bootcamp"
-date:       2019-04-16 15:56:37 +0000
+date:       2019-04-16 11:56:38 -0400
 permalink:  my_first_blog_post_why_i_decided_to_join_a_coding_bootcamp
 ---
 
