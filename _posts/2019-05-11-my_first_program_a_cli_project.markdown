@@ -5,7 +5,7 @@ date:       2019-05-11 18:51:46 -0400
 permalink:  my_first_program_a_cli_project
 ---
 
-I've officially made it through the Object Oriented Programming (OOP) section of the Ruby track of the FlatIron Software Engineering bootcamp and as it is for all of the other sections of the course, we were given a project to complete that would reinforce our understanding of the material we just learned (in this case, Object Oriented Programming & Web Scraping).  The requirements for the project were to create a CLI (Command Line Interface) program that scrapes HTML / CSS data from a website of our choosing and presents a menu (at least one level deep) to the user of our program.  Beyond that, the rest of the requirements were open to our choosing.  
+I've officially made it through the Object Oriented Programming (OOP) section of the Ruby track of the FlatIron Software Engineering bootcamp and as it is for all of the other sections of the course, we were given a project to complete that would reinforce our understanding of the material we learned (in this case, Object Oriented Programming & Web Scraping).  The requirements for the project were to create a CLI (Command Line Interface) program that scrapes HTML / CSS data from a website of our choosing and presents a menu (at least one level deep) to the user of our program.  Beyond that, the rest of the requirements were open to our choosing.  
 
 I have a very strong passion for surfing and I have traveled around the world finding the best beaches and waves to surf.  One of the spots that has always been very close to my heart is Costa Rica.  For this reason, I decided it would be fun to create a CLI program that would display the daily surf report for various famous surfspots in Costa Rica.  To do this, I decided to create a menu driven Ruby gem that would scrape surf report data from the web and print it via the Terminal to the user of the gem.  For the surf report data, I decided to utilize the website Magicseaweed.com due to the quality of up-to-date data it has.  I utilized the Nokogiri gem to perform the actual scraping of the data into XML elements and then wrote various methods & objects to parse and collect the data into a readable format.  
 
@@ -13,13 +13,11 @@ Overall this was a very challenging but rewarding experience and has helped stre
 
 **Git Hub**
 
-One of the first things I had to learn about when creating my gem project was GitHub.   I realized very early that I needed somewhere and someway to save my code throughout the process (and using Notepad to save it didn't sound like a great idea).  So I started researching how to link my code to GitHub and discovered new terms like 'repository', 'git add, 'git commit' and 'git push'.  I also learned how to clone my project to my IDE because I was using an IDE provided by FlatIron that utilizes integration with GitHub but does not actually store data locally.  After the project was over, I felt that I am much more comfortable using GitHub and I am starting to realize it's value to software development.
+One of the first things I had to learn about when creating my gem project was GitHub.   I realized very early that I needed somewhere and someway to save my code throughout the process (and using Notepad to save it didn't sound like a great idea).  So I started researching how to link my code to GitHub and I started discovering new terms like 'repository', 'git add, 'git commit' and 'git push'.  I also learned how to clone my project to my IDE because I was using an IDE provided by FlatIron that utilizes integration with GitHub but does not actually store data locally.  After the project was over, I felt that I am much more comfortable using GitHub and I am starting to realize it's value to software development.
 
 **HTML / CSS Scraping**
 
-
-
-I had some previous experience with HTML scraping from a few prior labs that I had completed but this project really helped reinforce this process.  I also learned more about HTML / CSS data structures in general by having to parse through the data in order to obtain what I wanted for my program.  I discovered a few Google Chrome extensions that assisted me with finding a CSS selector that I could use to help parse the data.  These are SelectorGadget (https://selectorgadget.com/) and ChroPath (https://autonomiq.io/chropath/).  Both of these extensions assist you in finding appropriate CSS selectors for the data you are trying to parse.
+I had a little bit of previous experience with HTML scraping from a few prior labs that I had completed but this project really helped reinforce this process.  I also learned more about HTML / CSS data structures in general by having to parse through the data in order to obtain what I wanted for my program.  I discovered a few Google Chrome extensions that assisted me with finding a CSS selector that I could use to help parse the data.  These are SelectorGadget (https://selectorgadget.com/) and ChroPath (https://autonomiq.io/chropath/).  Both of these extensions assist you in finding appropriate CSS selectors for the data you are trying to parse.
 
 **Snapshot of Program**
 
@@ -62,6 +60,16 @@ Third-level menu webpage:  Surf Spot Forecast (based on selected Surf Spot)
 And the corresponding Nokogiri webscraping code:
 
 ![](https://i.imgur.com/cWtsdKp.jpg)
+
+**Final Thoughts**
+
+Being that this was my first programming project, I was pretty intimidated by the idea in general and was kind of lost at how to begin a program from scratch because in all of our previous labs we either had some files, methods, classes, or a combination already written for us to start with.  For this project, I was starting from a blank canvas for the first time and it was quite intimidating.   But after contemplating on it for a while, I was able to come up with the idea for my project and start breaking it down into manageable pieces and once I actually started writing code, things just kind of progressed from there.  
+
+One task that I did prior to writing any code (which I think really helped me in the long run) was to type up an outline of my project and the main tasks, menus, etc that I wanted to have in my program.  This gave me a template to go off of so I had something to work off of and I think it really helped me get started and move forward.  
+
+Below is what my project plan looked like and although my actual project changed from how I originally planned it, this outline was extremely helpful in allowing me to focus and ultimately create my program.
+
+![](https://i.imgur.com/XuCeQLU.jpg)
 
 
 
