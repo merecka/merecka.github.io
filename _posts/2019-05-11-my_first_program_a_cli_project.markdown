@@ -25,7 +25,7 @@ I had some previous experience with HTML scraping from a few prior labs that I h
 
 Here is the basic outline and function of my program.  The program starts and presents the user with a first-level menu which is a list list of different geographical provinces within Costa Rica.  The user is able to select which province they want to view by typing the corresponding number and pressing 'Enter'.
 
-![](https://i.imgur.com/bcaHhZF.jpg)
+![](https://i.imgur.com/VF0dLQG.jpg)
 
 Once this is done, the user is then presented with a second-level menu which displays a list of surf spots located in the selected province.  Again, the user is able to select which surfspot they would like to view by typing the corresponding number and pressing 'Enter'.
 
@@ -33,7 +33,7 @@ Once this is done, the user is then presented with a second-level menu which dis
 
 At this point, the program will pull the current surf report data from the MagicSeaweed website for the chosen surf spot and display it to the user in the Terminal, as depicted here.
 
-![](https://i.imgur.com/VF0dLQG.jpg)
+![](https://i.imgur.com/bcaHhZF.jpg)
 
 Lastly, the user is presented with an option to 'See another forecast' or 'Exit'.  If the 'See another forecast' option is chosen, the program will re-run from the beginning and present the previous menu options to the user in the same order.  
 
@@ -45,7 +45,7 @@ First-level menu webpage:  Costa Rica Provinces
 
 And the corresponding Nokogiri web scraping code:
 
-![](https://i.imgur.com/aWTWo7a.jpg)
+![](https://i.imgur.com/ewy8kem.jpg)
 
 Second-level menu webpage:  Surf Spot List (based on selected Province)
 
