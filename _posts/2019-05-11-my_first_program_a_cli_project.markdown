@@ -1,6 +1,6 @@
 ---
 layout: post
-title:      "My first program (a CLI project)"
+title:      "My First Ruby Program (a CLI project)"
 date:       2019-05-11 18:51:46 -0400
 permalink:  my_first_program_a_cli_project
 ---
