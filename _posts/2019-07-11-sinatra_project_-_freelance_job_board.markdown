@@ -61,6 +61,6 @@ Passwords are stored using the has_secure_password macro which utilizes the BCry
 **Conclusion**
 As I mentioned at the beginning of this post, this overall experience was very benficial to my programming development.  I have more confidence in my programming abilities and also am beginning to understand the vast possibilities of applications that can be created using a framework like Sinatra.  That being said, I also feel like I've barely scratched the surface when it comes to web app development and I am definitely hungry to learn more.  
 
-Even though I call this app complete, I still feel there are lots of additional features I could add to make it more versatile.  In addition, there is definitley lots of room for adding additional HTML/CSS styling to make it more aesthetically pleasing from a UX point of view.  
+Even though I call this app complete, I still feel that there are lots of additional features I could add to make it more versatile.  In addition, there is definitley lots of room for adding additional HTML/CSS styling to make it more aesthetically pleasing from a UX point of view.  
 
 But those things will have to wait for now because next week I will begin the adventure of learning Ruby on Rails..
