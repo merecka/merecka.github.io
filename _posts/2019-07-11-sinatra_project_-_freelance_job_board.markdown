@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Sinatra Project - Freelance Job Board"
-date:       2019-07-12 00:45:53 +0000
+date:       2019-07-11 20:45:54 -0400
 permalink:  sinatra_project_-_freelance_job_board
 ---
 
