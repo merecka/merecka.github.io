@@ -13,13 +13,13 @@ Basically the first step of creating my project was utilizing the gem called Cor
 
 
 
-![](https://i.imgur.com/x5HeGG8.png)
+![](https://i.imgur.com/Q4APcl9.png)
 
 
 **The Work Begins**
 After getting the project directory structure initialized the next step was trying to figure out my Models, Views, and Controllers.  But before I could do all that, I had to really figure out my Models and their Associations.  This is where the struggle started as ActiveRecord associations are still a work-in-progress for me.  In order to help my accomplish this, I decided to draw out my tables on paper in order to visualize them easier.  
 
-![](https://imgur.com/ZoMsMHZ)
+![](https://i.imgur.com/ZoMsMHZ.png)
 
 The biggest challenge here was figuring out the association between Users, Owners, and Jobs.  Since Jobs are created by Owners, they essentially belong to Owners.  But I wanted to implement a way for Users (aka:  job applicants) to be able to apply to jobs and in essence take ownership of Jobs too.  But in this case, a User would need to be able to share ownership over many Jobs.  This is where the Users-Jobs 'joins' table comes in.  By having a 'joins' table, we can use the has_and_belongs_to_many ActiveRecord association between Users and Jobs which will allow multiple Job records to be associated to multiple Users at the same time.  And further, an individual User can be associated to multiple Jobs at the same time.  
 
@@ -27,32 +27,32 @@ Once the assocations were setup, then it was time to start building the Controll
 
 
 The homepage of my app:
-![](https://imgur.com/x5HeGG8)
+![](https://i.imgur.com/x5HeGG8.png)
 
 
 
 From there I had to decide what Views I wanted to use in order to build additional routes.  I knew that I would need separate Show pages for Users and Owners since they would need to see different data.  Owners (aka:  Companies) would be interested in creating job postings as well as viewing their job postings while Users (aka:  Job Applicants) would be intersted in viewing available job postings as well as knowing which jobs they had applied to.  
 
 This is the User's show page:
-![](https://imgur.com/C55A4wl)
+![](https://i.imgur.com/C55A4wl.png)
 
 
 
 And the Owner's show page:
-![](https://imgur.com/rZ10VNZ)
+![](https://i.imgur.com/rZ10VNZ.png)
 
 
 
 The functionality of this app is that Owner's have the ability to create job postings while User's can only view job postings.  
 
 The Owner's job creation page:
-![](https://imgur.com/bytO72F)
+![](https://i.imgur.com/bytO72F.png)
 
 All Jobs and Users & Owners accounts are saved to a SQLite database.  User and Owner accounts are created username, email address, and passwords:
 
 
 
-![](https://imgur.com/X1m8EAh)
+![](https://i.imgur.com/X1m8EAh.png)
 
 
 
