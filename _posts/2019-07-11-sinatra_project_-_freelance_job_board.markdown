@@ -48,7 +48,7 @@ The functionality of this app is that Owner's have the ability to create job pos
 The Owner's job creation page:
 ![](https://i.imgur.com/bytO72F.png)
 
-All Jobs and Users & Owners accounts are saved to a SQLite database.  User and Owner accounts are created username, email address, and passwords:
+All Jobs and Users & Owners accounts are saved to a SQLite database.  User and Owner accounts are created with a username, email address, and password:
 
 
 
