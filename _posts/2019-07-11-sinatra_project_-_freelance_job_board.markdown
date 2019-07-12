@@ -13,7 +13,7 @@ Basically the first step of creating my project was utilizing the gem called Cor
 
 
 
-![](https://imgur.com/Q4APcl9)
+![]https://imgur.com/Q4APcl9
 
 
 
