@@ -23,10 +23,10 @@ After getting the project directory structure initialized the next step was tryi
 
 The biggest challenge here was figuring out the association between Users, Owners, and Jobs.  Since Jobs are created by Owners, they essentially belong to Owners.  But I wanted to implement a way for Users (aka:  job applicants) to be able to apply to jobs and in essence take ownership of Jobs too.  But in this case, a User would need to be able to share ownership over many Jobs.  This is where the Users-Jobs 'joins' table comes in.  By having a 'joins' table, we can use the has_and_belongs_to_many ActiveRecord association between Users and Jobs which will allow multiple Job records to be associated to multiple Users at the same time.  And further, an individual User can be associated to multiple Jobs at the same time.  
 
-Once the assocations were setup, then it was time to start building the Controllers and Routes.  Naturally the first route I built was the index ' get '/' do' route.  This is basically the index (homepage) of app.  
+Once the assocations were setup, then it was time to start building the Controllers and Routes.  Naturally the first route I built was the index ' get '/' do' route.  This is basically the index (homepage) of my app.  
 
 
-The homepage of my app:
+The homepage of the app:
 ![](https://i.imgur.com/x5HeGG8.png)
 
 
