@@ -11,7 +11,11 @@ Part of the FlatIron Bootcamp curriculum is to create a web application using Si
 **Getting Started**
 Basically the first step of creating my project was utilizing the gem called Corneal.  Corneal is a gem (written by a FlatIron alumn) that initializes and sets up the initial project directory and folders with all of the required files (with the correct naming conventions).  This is really useful as it automates some of the 'grunt' work out of initializing the project https://thebrianemory.github.io/corneal/.   
 
+
+
 ![](https://imgur.com/Q4APcl9)
+
+
 
 **The Work Begins**
 After getting the project directory structure initialized the next step was trying to figure out my Models, Views, and Controllers.  But before I could do all that, I had to really figure out my Models and their Associations.  This is where the struggle started as ActiveRecord associations are still a work-in-progress for me.  In order to help my accomplish this, I decided to draw out my tables on paper in order to visualize them easier.  
@@ -26,14 +30,18 @@ Once the assocations were setup, then it was time to start building the Controll
 The homepage of my app:
 ![](https://imgur.com/x5HeGG8)
 
+
+
 From there I had to decide what Views I wanted to use in order to build additional routes.  I knew that I would need separate Show pages for Users and Owners since they would need to see different data.  Owners (aka:  Companies) would be interested in creating job postings as well as viewing their job postings while Users (aka:  Job Applicants) would be intersted in viewing available job postings as well as knowing which jobs they had applied to.  
 
 This is the User's show page:
 ![](https://imgur.com/C55A4wl)
 
 
+
 And the Owner's show page:
 ![](https://imgur.com/rZ10VNZ)
+
 
 
 The functionality of this app is that Owner's have the ability to create job postings while User's can only view job postings.  
@@ -43,7 +51,11 @@ The Owner's job creation page:
 
 All Jobs and Users & Owners accounts are saved to a SQLite database.  User and Owner accounts are created username, email address, and passwords:
 
+
+
 ![](https://imgur.com/X1m8EAh)
+
+
 
 Passwords are stored using the has_secure_password macro which utilizes the BCrypt gem to encrypt passwords https://en.wikipedia.org/wiki/Bcrypt.  
 
