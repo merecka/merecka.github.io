@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Debugging in Ruby and Rails"
-date:       2019-09-21 19:02:33 +0000
+date:       2019-09-21 15:02:34 -0400
 permalink:  debugging_in_ruby_and_rails
 ---
 
