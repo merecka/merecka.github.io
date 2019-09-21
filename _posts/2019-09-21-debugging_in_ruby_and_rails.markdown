@@ -18,7 +18,7 @@ While these are certainly not the only debugging tools available to use with Rub
 
 We'll start off with discussing Pry.  Pry is an open-source gem available for anyone to use and is available for download on multiple locations including RubyGems.org and GitHub (https://github.com/pry/pry).  The easiest way to install Pry is to add it to your Gemfile in your Ruby (or Rails) project with the command `gem 'pry'`.  After this is done you can go to your terminal and navigate to the home directory of your project and execute the command 'bundle install' (assuming you have Bundler installed).  
 
-![](https://imgur.com/hPIIkpl)
+![](https://i.imgur.com/hPIIkpl.png)
 
 This will reach out to https://rubygems.org and locate and install all of the gems in your Gemfile (including Pry).  Once this is done you are ready to start using Pry.
 
