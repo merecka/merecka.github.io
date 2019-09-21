@@ -26,11 +26,11 @@ So how do you actually use Pry in the debugging phase?  Well here's an example:
 
 Let's say we are trying to view the list of Rooms in the Rooms#Index view of our hotel booking Rails application.  We can see the link to 'View Available Rooms' which points to the `rooms#index` action in our controller.
 
-![](https://imgur.com/RAJpNmv)
+![](https://i.imgur.com/RAJpNmv.png)
 
 but when we click the link we receive the following error message:
 
-![](https://imgur.com/8bxym12)
+![](https://i.imgur.com/8bxym12.png)
 
 From the looks of this error, it appears as though there is an issue with the following line of code `<% @rooms.each do |room| %>` which exists in our rooms#index view page as is told to use at the top of the error screen.  Wouldn't it be nice if we could somehow diving into our code at the exact spot where we are getting this error to see what value(s) our variables & methods are giving us which could be throwing this error?   Well we can and that's one of the big advantages of using Pry for debugging!  So how can we do this?  
 
@@ -38,41 +38,41 @@ Well first, we have to decide where we want to start debugging.  In this example
 
 *Note:  We are using the format of `<% binding.pry %> ` since we are in an ERB view page.  When using Pry outside of view pages, we only need to type `binding.pry`.
 
-![](https://imgur.com/zPFzsQH)
+![](https://i.imgur.com/zPFzsQH.png)
 
-![](https://imgur.com/KDPze5z)
+![](https://i.imgur.com/KDPze5z.png)
 
 So in order to perform our debugging with Pry, we need to go to our terminal in order to check the values of our variables, methods, etc and if our attempt at using Pry worked we should be prompted with a session to do such that.  So let's see what our terminal looks like: 
 
-![](https://imgur.com/TfaDHSs)
+![](https://i.imgur.com/TfaDHSs.png)
 
 Oops, it looks like even thought we inserted a binding.pry into our View page, we're still unable to get into it since we don't see any prompt in our terminal.  Why don't we try putting our `binding.pry` before the line of code that's throwing the error, refresh our page, and then view our terminal to see what happens.
 
-![](https://imgur.com/ukAeknR)
+![](https://i.imgur.com/ukAeknR.png)
 
-![](https://imgur.com/VgoKhHs)
+![](https://i.imgur.com/VgoKhHs.png)
 
 Great!  Now we can see our Pry prompt at the bottom of our terminal screen which means that we successfully 'hit' our `binding.pry`.  So what can we do here?  Well we can essentially run any Ruby command as if we were in an IRB session.  In this case it would probably make sense to check the value of our `@rooms` variable that we are trying to iterate over and see what (if any) value it holds.  So let's do that:
 
-![](https://imgur.com/g8mE1ah)
+![](https://i.imgur.com/g8mE1ah.png)
 
-Uh oh, looks like we're getting a `nil` value for `@rooms` which could definitely be the cause of our problem.  So we'll need to figure out where we're passing in the `@rooms` variable from into our view page.  And if we've followed RESTful organizational structure, it should be in our Rooms#index controller action.  So let's take a look:
+Uh oh, looks like we're getting a `nil` value returned for `@rooms` which could definitely be the cause of our problem.  So we'll need to figure out where we're passing in the `@rooms` variable from into our view page.  And if we've followed RESTful organizational structure, it should be in our Rooms#index controller action.  So let's take a look:
 
-![](https://imgur.com/bageiCf)
+![](https://i.imgur.com/bageiCf.png)
 
 Sure enough it looks like the issue is here.  Can you see it?  It looks like we forgot the `@` symbol in front of `rooms` in order to make it an instance variable that we can pass to our #index view.  So that would explain why `@rooms` is returning a nil value (because we haven't declared it properly in the controller).  So this should be an easy fix so let's give it a shot:
 
-![](https://imgur.com/CKyt7u3)
+![](https://i.imgur.com/CKyt7u3.png)
 
 So before we can refresh our page with our new code, we'll need to go into our terminal and terminate our Pry session by exiting out with the `exit!` command (note: we can also use `exit` as well but if there's other `binding.pry`'s we'll have to type 'exit' each time we hit another one).  
 
-![](https://imgur.com/Tq9znsv)
+![](https://i.imgur.com/Tq9znsv.png)
 
 Now that we're out of our Pry session we can restart our server and refresh our page and keep our fingers crossed that it is working now:
 
 *Note:  You will need to remove the `<% binding.pry %>` line in the view page prior to refreshing the page in the browser or you will keep 'hitting' the Pry and will have to go to the terminal window each time to exit out of the Pry session.  
 
-![](https://imgur.com/qgBVhgy)
+![](https://i.imgur.com/qgBVhgy.png)
 
 Great! It looks like our page is working now and we see a list of Rooms like we expect to in our #index action.  
 
