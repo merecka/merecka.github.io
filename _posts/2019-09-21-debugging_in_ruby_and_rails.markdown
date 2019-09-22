@@ -78,6 +78,32 @@ Great! It looks like our page is working now and we see a list of Rooms like we 
 
 As you can probably guess, this is a fairly easy, straight-forward issue that we worked through but it's main purpose is to demonstrate how Pry works and the commands & procedures you use in order to utilize it for debugging.  This is by no means the extent of what Pry can do and there is a lot of material available on the internet to read which goes more indepth into all of the extra features & commands you can use.  But if you understand the basics of what we did here then you're well on your way to discovering the usefulness of Pry.
 
+# Rails Console
+Another very useful tool in the world of Ruby and Rails debugging is the Rails console.  The Rails console is essentially an IRB environment which is built on the Rails environment and therefore gives access to Rails and all it's methods and features.  The Rails console is a terminal (command-line) interface similar to Pry but the difference is that it can be activated at any time whether or not you have a web server running.  The console is started by executing the command `rails console` from the terminal command line within the root directory of your Rails application.  
+
+![](https://i.imgur.com/1wHTEyr.png)
+
+Once this is done you are now inside the console and can begin debugging, experimenting with different code, etc.  For instance, in our Reservation booking application we can query our SQLite3 database using ActiveRecord methods from within the Rails console in order to view our Rooms model data:
+
+![](https://i.imgur.com/UaYJBdN.png)
+
+We can also create and test new methods, variables, etc in order to test them inside the console before committing them to our application:
+
+![](https://i.imgur.com/UaYJBdN.png)
+
+The convenience here is that this variable is only temporarily stored in the cache of our Rails console session and once we terminate the session it is not permanently stored in our application (so if we really messed up it won't affect anything permanent in our program).  Note however that any data we persist to the database with methods such as `.create`, `.update`, and `.destroy` will impact the database permanently so proceed with caution when using any of these methods.  
+
+To terminate the Rails console session simply execute the `exit` command from the command line and your session will be ended.  
+
+The Rails console is a very useful and simple to use tool for debugging and the nice thing is that it does not require any installation as it is already built into Rails.  You can utilize it all from the command line and interact with your application just like you would through IRB.  
+
+# Final Thoughts
+We have seen two different methods available to use for debugging in Ruby and Rails.  Both of these tools are useful to programmers while developing applications and each one has it's own advantages.  In practice both of these tools are most useful when used in conjuction with each other therefore it recommended to master the use of both so that the full advantage of both can be realized.  As with anything, it takes time to master the use of these tools so the more you use them the more tricks and uses you will discover.  
+
+Thanks for reading my blog post and I hope this info was helpful to your programming journey.
+
+
+
 
 
 
