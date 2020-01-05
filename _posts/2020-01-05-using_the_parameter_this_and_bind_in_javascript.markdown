@@ -1,7 +1,7 @@
 ---
 layout: post
-title:      "Using the parameter *this* and *bind()* in JavaScript"
-date:       2020-01-05 20:13:01 +0000
+title:      "Using *this* and *bind()* in JavaScript"
+date:       2020-01-05 15:13:02 -0500
 permalink:  using_the_parameter_this_and_bind_in_javascript
 ---
 
