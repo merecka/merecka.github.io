@@ -9,19 +9,19 @@ I have just completed my project for the JavaScript section of the Flairon Softw
 
 One of the more important concepts that I learned and frequently used throughout my project was the concept of *this*.  The parameter *this* is essentially a keyword that references the owner of the object that it belongs to.  If you are familiar with Ruby, then *this* is very similar to *self*. In JavaScript, the default "global" object for *this* in a browser window is `[object Window]` so whenever *this* is referenced inside the browser console in the absense of JavaScript code, it returns the Window object as demonstrated below:
 
-![](https://imgur.com/a/0nWa3dt)
+![](https://i.imgur.com/R83YUkG.png)
 
 JavaScript functions are also tied to the global Window object so whenever *this* is called inside a standalone, one-dimensional function, it returns the default "global" Window object as well:
 
-![](https://imgur.com/a/KCEZKqH)
+![](https://i.imgur.com/HTA2dna.png)
 
 So when does *this* ever change value to something other than the default "global" Window object?  One place this occurs is inside Event Listeners.  For example, in the code below, *this* is referenced inside an Event Listener tied to the click action of a button.  When we add a breaktpoint in the Event Listener and reference *this*, we see that it references the object tied to the Event Listener, which in this case is the button.
 
-![](https://imgur.com/a/uwjC3YS)
+![](https://i.imgur.com/fpLs0a7.png)
 
 Another example of *this* changing value to something other than the default "global" Window object is with the use of objects.  Javascript ES6 introduced the concept of Classes which can be used to instantiate instances of Class objects when using the Constructor function.  In the example below we have added a breakpoint inside a method that is tied to an instance of a Class object.  If *this* is referenced inside the method after the the Class object is instantiated, *this* will reference the instance of the object as seen below:
 
-![](https://imgur.com/a/zu31Bdv)
+![](https://i.imgur.com/yG94FnS.png)
 
 So what practicality does *this* have and what does it actually do for us?  In essence, *this* allows us to access properties of objects.  In the example below, we have defined properties of instances of PrimaryComments objects.  Since we are accessing *this* from within the PrimaryComments class, it references the instance of the PrimaryComment that was instantiated.  So based on this, we can access the properties of the PrimaryComment object that we set in the constructor function from within methods tied to the instance such as the `fetchAndLoadPrimaryComments()` method as seen below:
 
@@ -86,7 +86,7 @@ In the example below we observe that when we execute the function `renderNewQues
 	}
 ```
 
-![](https://imgur.com/a/yXvcKOD)
+![](https://i.imgur.com/dW9NOwd.png)
 
 In order to modify the value of the *this* parameter that is passed into the `renderNewQuestionForm` function, we have to utilize the `bind()` method.  In order to do this we have to add `bind()` to the object who's *this* value we want to modify as well as supply an argument to `bind()` with the value that we want *this* to have:
 
@@ -104,6 +104,8 @@ In order to modify the value of the *this* parameter that is passed into the `re
 		new_prime_comment_button.addEventListener("click", this.adapter.renderNewQuestionForm.bind(this.adapter))
 	}
 ```
+
+![](https://i.imgur.com/zbmHaax.png)
 
 Notice how the scope of *this* now points to an instance of the Primary Comments Adapter.  That is the result we wanted since we are calling a function in that scope and we would like to access that object's properties.  By making this modification, we can now reference the newly created instance of `Primary Comments Adapter` from within the `renderNewQuestionForm` method using the *this* paramter after we have activated the Event Listener tied to the button.
 
