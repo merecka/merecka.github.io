@@ -17,7 +17,7 @@ JavaScript functions are also tied to the global Window object so whenever *this
 
 So when does *this* ever change value to something other than the default "global" Window object?  One place this occurs is inside Event Listeners.  For example, in the code below, *this* is referenced inside an Event Listener tied to the click action of a button.  When we add a breaktpoint in the Event Listener and reference *this*, we see that it references the object tied to the Event Listener, which in this case is the button.
 
-![](https://i.imgur.com/fpLs0a7.png)
+![](https://i.imgur.com/dW9NOwd.png)
 
 Another example of *this* changing value to something other than the default "global" Window object is with the use of objects.  Javascript ES6 introduced the concept of Classes which can be used to instantiate instances of Class objects when using the Constructor function.  In the example below we have added a breakpoint inside a method that is tied to an instance of a Class object.  If *this* is referenced inside the method after the the Class object is instantiated, *this* will reference the instance of the object as seen below:
 
@@ -86,7 +86,7 @@ In the example below we observe that when we execute the function `renderNewQues
 	}
 ```
 
-![](https://i.imgur.com/dW9NOwd.png)
+![](https://i.imgur.com/fpLs0a7.png)
 
 In order to modify the value of the *this* parameter that is passed into the `renderNewQuestionForm` function, we have to utilize the `bind()` method.  In order to do this we have to add `bind()` to the object who's *this* value we want to modify as well as supply an argument to `bind()` with the value that we want *this* to have:
 
